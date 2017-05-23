@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0B3BCF9-8ABC-48B9-A9E9-BA8707BB4B07}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Impendulo.Enquiry.Development</RootNamespace>
+    <AssemblyName>Impendulo.Enquiry</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\frmEnquiryDocumentsToSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\frmEnquiryDocumentsToSend.Designer.cs">
+      <DependentUpon>frmEnquiryDocumentsToSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnquiriesWorkBanch\frmEnquiriesWorkBanch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnquiriesWorkBanch\frmEnquiriesWorkBanch.Designer.cs">
+      <DependentUpon>frmEnquiriesWorkBanch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnquiryProcessing\Aprenticeship\Step1-DocumentsToSend\frmEnquiryDocumentsToSend_Apprenticeship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnquiryProcessing\Aprenticeship\Step1-DocumentsToSend\frmEnquiryDocumentsToSend_Apprenticeship.Designer.cs">
+      <DependentUpon>frmEnquiryDocumentsToSend_Apprenticeship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnquiryProcessing\Aprenticeship\Step2 - DocumentationRecieved\frmDocumentationRecieved.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnquiryProcessing\Aprenticeship\Step2 - DocumentationRecieved\frmDocumentationRecieved.Designer.cs">
+      <DependentUpon>frmDocumentationRecieved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnquiryV2\frmClientEnquiryV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnquiryV2\frmClientEnquiryV2.Designer.cs">
+      <DependentUpon>frmClientEnquiryV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientEnquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientEnquiry.Designer.cs">
+      <DependentUpon>frmClientEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InitaialConsultation\frmEnquiryInitialConsultation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitaialConsultation\frmEnquiryInitialConsultation.Designer.cs">
+      <DependentUpon>frmEnquiryInitialConsultation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InitialDocumentation\frmInitailDocumentation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitialDocumentation\frmInitailDocumentation.Designer.cs">
+      <DependentUpon>frmInitailDocumentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewEnquiry\frmNewEnquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewEnquiry\frmNewEnquiry.Designer.cs">
+      <DependentUpon>frmNewEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectContacts\frmSelectCompanyContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectContacts\frmSelectCompanyContact.Designer.cs">
+      <DependentUpon>frmSelectCompanyContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectContacts\frmSelectIndividualContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectContacts\frmSelectIndividualContact.Designer.cs">
+      <DependentUpon>frmSelectIndividualContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectCourseCurriculum\frmSelectCourseCurriculumForClientEnquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCourseCurriculum\frmSelectCourseCurriculumForClientEnquiry.Designer.cs">
+      <DependentUpon>frmSelectCourseCurriculumForClientEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestPage\frmEnquiryTwest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestPage\frmEnquiryTwest.Designer.cs">
+      <DependentUpon>frmEnquiryTwest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSelectedCurriculumEnrollQty\frmUpdateSelectedCurriculumEnrollQty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSelectedCurriculumEnrollQty\frmUpdateSelectedCurriculumEnrollQty.Designer.cs">
+      <DependentUpon>frmUpdateSelectedCurriculumEnrollQty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewContactInformation\frmEnquiryViewContactInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewContactInformation\frmEnquiryViewContactInformation.Designer.cs">
+      <DependentUpon>frmEnquiryViewContactInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewHistory\frmEnquiryViewHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewHistory\frmEnquiryViewHistory.Designer.cs">
+      <DependentUpon>frmEnquiryViewHistory.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Configuration\frmEnquiryDocumentsToSend.resx">
+      <DependentUpon>frmEnquiryDocumentsToSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnquiriesWorkBanch\frmEnquiriesWorkBanch.resx">
+      <DependentUpon>frmEnquiriesWorkBanch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnquiryProcessing\Aprenticeship\Step1-DocumentsToSend\frmEnquiryDocumentsToSend_Apprenticeship.resx">
+      <DependentUpon>frmEnquiryDocumentsToSend_Apprenticeship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnquiryProcessing\Aprenticeship\Step2 - DocumentationRecieved\frmDocumentationRecieved.resx">
+      <DependentUpon>frmDocumentationRecieved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnquiryV2\frmClientEnquiryV2.resx">
+      <DependentUpon>frmClientEnquiryV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientEnquiry.resx">
+      <DependentUpon>frmClientEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitaialConsultation\frmEnquiryInitialConsultation.resx">
+      <DependentUpon>frmEnquiryInitialConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitialDocumentation\frmInitailDocumentation.resx">
+      <DependentUpon>frmInitailDocumentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewEnquiry\frmNewEnquiry.resx">
+      <DependentUpon>frmNewEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SelectContacts\frmSelectCompanyContact.resx">
+      <DependentUpon>frmSelectCompanyContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectContacts\frmSelectIndividualContact.resx">
+      <DependentUpon>frmSelectIndividualContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectCourseCurriculum\frmSelectCourseCurriculumForClientEnquiry.resx">
+      <DependentUpon>frmSelectCourseCurriculumForClientEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPage\frmEnquiryTwest.resx">
+      <DependentUpon>frmEnquiryTwest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSelectedCurriculumEnrollQty\frmUpdateSelectedCurriculumEnrollQty.resx">
+      <DependentUpon>frmUpdateSelectedCurriculumEnrollQty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewContactInformation\frmEnquiryViewContactInformation.resx">
+      <DependentUpon>frmEnquiryViewContactInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewHistory\frmEnquiryViewHistory.resx">
+      <DependentUpon>frmEnquiryViewHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.ContactDetail.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Curriculum.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.CurriculumEnquiry.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Enquiry.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Individual.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.LookupDepartment.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Impendulo.Common\Impendulo.Common.csproj">
+      <Project>{0f07fa77-11b2-41a8-8133-4fd607c1d43a}</Project>
+      <Name>Impendulo.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impendulo.Company\Impendulo.Company.csproj">
+      <Project>{CF29B394-3582-4CEA-9D18-6B6A6A8A8F9D}</Project>
+      <Name>Impendulo.Company</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impendulo.ContactDetails\Impendulo.ContactDetails.csproj">
+      <Project>{188524C3-D2C8-4BC8-9EF4-12E94897DD99}</Project>
+      <Name>Impendulo.ContactDetails</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impendulo.Contacts\Impendulo.Contacts.csproj">
+      <Project>{326C2DB0-4488-4820-882D-13FB3526F596}</Project>
+      <Name>Impendulo.Contacts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impendulo.Data\Impendulo.Data.csproj">
+      <Project>{db508b3a-01f7-4b80-8ca3-c4c0151b63ee}</Project>
+      <Name>Impendulo.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impendulo.Email\Impendulo.Email.csproj">
+      <Project>{268FA5ED-F32A-4AF9-85DF-64326DBE5D05}</Project>
+      <Name>Impendulo.Email</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impendulo.StudentEngineeringCourseErollment\Impendulo.StudentCourseErollment.csproj">
+      <Project>{D23EB8C1-6D7C-4D0C-B20C-6B0060C4343B}</Project>
+      <Name>Impendulo.StudentCourseErollment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impendulo.StudentsAddNewStudent\Impendulo.Students.csproj">
+      <Project>{AA442BE6-7AB7-4222-9151-BA9966B04017}</Project>
+      <Name>Impendulo.Students</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
